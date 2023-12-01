@@ -1,0 +1,25 @@
+2023-12-01 18:40:24 => URL is Checked  
+
+   2023-12-01 18:41:27 => New Position  Symbol: GBPJPY Type: Buy, Ticket: 1701423687311  
+
+   2023-12-01 19:56:58 => URL is Checked  
+
+   2023-12-01 19:57:17 => New Position  Symbol: GBPJPY Type: Buy, Ticket: 1701428237411  
+
+   2023-12-01 20:1:0 => URL is Checked  
+
+   2023-12-01 20:1:7 => New Position  Symbol: GBPJPY Type: Buy, Ticket: 26251267353  
+
+   2023-12-01 20:2:13 => URL is Checked  
+
+   2023-12-01 20:2:17 =>  Error 500 : alertSignal is Failed  errorMessage:d.getTime is not a function  
+
+   2023-12-01 20:2:27 =>  Error 500 : alertSignal is Failed  errorMessage:d.getTime is not a function  
+
+   2023-12-01 20:3:44 => URL is Checked  
+
+   2023-12-01 20:3:48 => New Position  Symbol: GBPJPY Type: Buy, Ticket: 26251428740  
+
+   2023-12-01 20:5:3 => New Position  Symbol: GBPJPY Type: Buy, Ticket: 72303789  
+
+   
