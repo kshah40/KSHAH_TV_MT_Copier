@@ -17,6 +17,7 @@ let CloseOrderInfo = {
 // Create and Save a new Tutorial
 
 let Alerts = [];
+let infoFiles = [];
 
 const fs = require('fs');
 
@@ -250,13 +251,15 @@ const PrintLog = async (msg) => {
     const date_time = (year + "-" + month + "-" + date + " " + hours + ":" + minutes + ":" + seconds);
     const fileName = year + "_" + month + "_" + date + ".txt";
     if (msg != "HistoryClear") {
-        const Resultdata = await fs.promises.appendFile(fileName, date_time + " => " + msg + "  \n   ", err => {
-            if (err) {
-                console.error(err);
-                console.log("File write is failed", fileName);
-            }
-            // file written successfully       
-        });
+        if (infoFiles.length < 30) {
+            const Resultdata = await fs.promises.appendFile(fileName, date_time + " => " + msg + "  \n   ", err => {
+                if (err) {
+                    console.error(err);
+                    console.log("File write is failed", fileName);
+                }
+                // file written successfully       
+            });
+        }
     }
     else {
         const Resultdata = await fs.promises.writeFile(fileName, date_time + " => " + msg + "\n", err => {
@@ -268,11 +271,14 @@ const PrintLog = async (msg) => {
         });
     }
 
-    let infoFiles = [];
+
     const testFolder = './';
 
     fs.readdirSync(testFolder).forEach(file => {
-        console.log(file);
+        if (file.includes(".txt")) {
+            //console.log(file);
+            infoFiles.push(file);
+        }
 
     });
 }

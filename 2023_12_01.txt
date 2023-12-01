@@ -28,4 +28,7 @@
    2023-12-01 20:44:2 => New Position  Symbol: GBPJPY Type: Buy, Ticket: 74642493  
    2023-12-01 21:0:5 => New Position  Symbol: GBPJPY Type: Buy, Ticket: 75605350  
    2023-12-01 21:0:57 => URL is Checked  
+   2023-12-01 21:17:43 => URL is Checked  
+   2023-12-01 21:22:55 => New Position  Symbol: GBPJPY Type: Buy, Ticket: 76975892  
+   2023-12-01 21:29:10 => New Position  Symbol: GBPJPY Type: Buy, Ticket: 77350231  
    
