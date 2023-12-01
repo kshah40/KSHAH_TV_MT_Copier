@@ -250,7 +250,7 @@ const PrintLog = async (msg) => {
     const date_time = (year + "-" + month + "-" + date + " " + hours + ":" + minutes + ":" + seconds);
     const fileName = year + "_" + month + "_" + date + ".txt";
     if (msg != "HistoryClear") {
-        const Resultdata = await fs.promises.appendFile(fileName, date_time + " => " + msg + "  \n\n   ", err => {
+        const Resultdata = await fs.promises.appendFile(fileName, date_time + " => " + msg + "  \n   ", err => {
             if (err) {
                 console.error(err);
                 console.log("File write is failed", fileName);
@@ -267,6 +267,14 @@ const PrintLog = async (msg) => {
             // file written successfully       
         });
     }
+
+    let infoFiles = [];
+    const testFolder = './';
+
+    fs.readdirSync(testFolder).forEach(file => {
+        console.log(file);
+
+    });
 }
 
 
