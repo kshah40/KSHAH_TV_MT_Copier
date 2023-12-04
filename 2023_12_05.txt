@@ -1,0 +1,3 @@
+2023-12-05 1:59:52 => HistoryClear
+2023-12-05 1:59:57 => New Position  Symbol: EURJPY Type: Sell, Ticket: 352797120  
+   

@@ -273,7 +273,7 @@ const PrintLog = async (msg) => {
 
 
     const testFolder = './';
-
+    infoFiles = [];
     fs.readdirSync(testFolder).forEach(file => {
         if (file.includes(".txt")) {
             //console.log(file);
