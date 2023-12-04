@@ -125,11 +125,11 @@ exports.AlertSignal = async (req, res) => {
     try {
         msg = "";
         let alertSignal = {
-            AlertType: -1,
+            AlertType: "",
             AlertSymbol: "",
             AlertTicket: -1,
         };
-        alertSignal.AlertType = req.body.type == "buy" ? 0 : 1;
+        alertSignal.AlertType = req.body.type;
         alertSignal.AlertSymbol = req.body.symbol;
         const d = new Date();
         const newYear = new Date(2023, 11, 1);
@@ -138,7 +138,7 @@ exports.AlertSignal = async (req, res) => {
         let month = d.getMonth() + 1;
         msg = "New Position " +
             " Symbol: " + alertSignal.AlertSymbol +
-            " Type: " + (alertSignal.AlertType == 0 ? "Buy," : "Sell,") +
+            " Type: " + (alertSignal.AlertType) +
             " Ticket: " + alertSignal.AlertTicket;
         console.log(msg);
         await PrintLog(msg);
@@ -210,7 +210,7 @@ exports.GetAlertInfo = async (req, res) => {
     try {
         sym = req.body.symbol;
         let alertSignal = {
-            AlertType: -1,
+            AlertType: "",
             AlertSymbol: "",
             AlertTicket: -1,
         };
